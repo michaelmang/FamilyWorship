@@ -25,12 +25,6 @@ class FamilySignup extends React.Component {
     });
   }
 
-  // handleProfilePic (event) {
-  //   this.setState({
-  //     profilePic: event.target.value
-  //   });
-  // }
-
   handleSubmit (event) {
     event.preventDefault();
     axios({
