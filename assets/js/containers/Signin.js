@@ -55,7 +55,6 @@ class Signin extends React.Component {
       }
     })
       .then((response) => {
-        console.log(response);
         if(response.data.meta.token !== "") {
           this.props.store.dispatch(StoreId(response.data.data.id));
           axios.get('https://sheltered-mesa-51446.herokuapp.com/api/families/family/' + response.data.data.id)
