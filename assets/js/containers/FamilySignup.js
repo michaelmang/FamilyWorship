@@ -6,7 +6,7 @@ import axios from 'axios';
 
 import StoreFamilyId from '../actions/StoreFamilyId';
 
-//Container React Component
+//Container Component
 class FamilySignup extends React.Component {
   constructor(props) {
     super(props);
