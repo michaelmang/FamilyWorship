@@ -46,7 +46,7 @@ class Signin extends React.Component {
       headers: {
         "Content-Type": "application/json",
       },
-      url: 'https://sheltered-mesa-51446.herokuapp.com/api/sessions',
+      url: 'http://www.familyworshipapp.com//api/sessions',
       data: {
         user: {
           email: this.state.email,
@@ -57,7 +57,7 @@ class Signin extends React.Component {
       .then((response) => {
         if(response.data.meta.token !== "") {
           this.props.store.dispatch(StoreId(response.data.data.id));
-          axios.get('https://sheltered-mesa-51446.herokuapp.com/api/families/family/' + response.data.data.id)
+          axios.get('http://www.familyworshipapp.com//api/families/family/' + response.data.data.id)
             .then((response) => {
               const familyID = response.data.data.id;
               this.props.store.dispatch(StoreFamilyId(familyID));

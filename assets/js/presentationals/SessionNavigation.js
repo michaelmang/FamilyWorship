@@ -30,7 +30,7 @@ class SessionNavigation extends React.Component {
       headers: {
         "Content-Type": "application/json",
       },
-      url: 'https://sheltered-mesa-51446.herokuapp.com/api/worship_sessions/' + this.props.stateProps.sessionID
+      url: 'http://www.familyworshipapp.com//api/worship_sessions/' + this.props.stateProps.sessionID
     })
       .then((response) => {
         this.props.store.dispatch(UpdateSession(""));

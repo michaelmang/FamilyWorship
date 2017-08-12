@@ -85,7 +85,7 @@ class DashboardUI extends React.Component {
   }
 
   getSessions() {
-    axios.get('https://sheltered-mesa-51446.herokuapp.com/api/worship_sessions/user_sessions/' + this.props.stateProps.id)
+    axios.get('http://www.familyworshipapp.com//api/worship_sessions/user_sessions/' + this.props.stateProps.id)
       .then((response) => {
         this.setState({
           sessionsResponse: response.data.data
@@ -106,7 +106,7 @@ class DashboardUI extends React.Component {
     axios({
       method: 'post',
       headers: {"Content-Type": "application/json"},
-      url: 'https://sheltered-mesa-51446.herokuapp.com/api/worship_sessions',
+      url: 'http://www.familyworshipapp.com//api/worship_sessions',
       data: {
         worship_session: {
           date: this.state.date,

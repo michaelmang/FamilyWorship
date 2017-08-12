@@ -32,7 +32,7 @@ class FamilySignup extends React.Component {
       headers: {
         "Content-Type": "application/json",
       },
-      url: 'https://sheltered-mesa-51446.herokuapp.com/api/families',
+      url: 'http://www.familyworshipapp.com//api/families',
       data: {
         family: {
           name: this.state.name,
