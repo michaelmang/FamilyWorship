@@ -57,11 +57,3 @@ config :family_worship, FamilyWorship.Repo,
   hostname: "localhost",
   pool_size: 10,
   port: 5432
-
-# Configures Guardian
-  config :guardian, Guardian,
-    issuer: "FamilyWorship",
-    ttl: {30, :days},
-    verify_issuer: true,
-    serializer: FamilyWorship.GuardianSerializer,
-    secret_key: "ht9l4jHJtpn420vjNGu2TNJxctxQMu+yEeP/ZxrF70IC1MOfqpt7F36wrrL7qNkX"

@@ -22,6 +22,13 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+# Configures Guardian
+  config :guardian, Guardian,
+    issuer: "FamilyWorship",
+    ttl: {30, :days},
+    verify_issuer: true,
+    serializer: FamilyWorship.GuardianSerializer,
+    secret_key: "ht9l4jHJtpn420vjNGu2TNJxctxQMu+yEeP/ZxrF70IC1MOfqpt7F36wrrL7qNkX"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
