@@ -18,7 +18,7 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://www.familyworshipapp.com//api/families/' + this.stateProps.familyID)
+    axios.get('https://family-worship.herokuapp.com/api/families/' + this.stateProps.familyID)
       .then((response) => {
         this.setState({ name: response.data.data.name });
       })
