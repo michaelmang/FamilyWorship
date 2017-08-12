@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
-import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
