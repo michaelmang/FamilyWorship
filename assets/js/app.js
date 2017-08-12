@@ -3,8 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { applyMiddleware, createStore } from 'redux';
-import logger from 'redux-logger';
+import { createStore } from 'redux';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
@@ -36,8 +35,7 @@ class App extends React.Component {
 
 //intialize store
 let store = createStore(
-  FamilyWorshipApp,
-  applyMiddleware( logger )
+  FamilyWorshipApp
 );
 
 ReactDOM.render(
