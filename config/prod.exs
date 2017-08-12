@@ -13,7 +13,7 @@ config :logger, level: :info
 config :guardian, Guardian,
   secret_key: System.get_env("GUARDIAN_SECRET_KEY")
 
-config :family_worship, FamilyWorshipWeb.Repo,
+config :family_worship, FamilyWorship.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
