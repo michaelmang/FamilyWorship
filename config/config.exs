@@ -11,7 +11,7 @@ config :family_worship,
 
 # Configures the endpoint
 config :family_worship, FamilyWorshipWeb.Endpoint,
-  url: [host: "familyworshipapp.com"],
+  url: [host: "familyworshipapp"],
   secret_key_base: "eDxiRsym52HFEJijR4NT8r1PAGhZp+lFAkViiP5sSLRXWAz/KeHADGNjJcJPOkYA",
   render_errors: [view: FamilyWorshipWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: FamilyWorship.PubSub,
