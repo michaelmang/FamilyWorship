@@ -55,10 +55,18 @@ class Session extends React.Component {
           .then((response) => {
             const verses = response.data.chapters[chapter - 1].verses;
             const prettyVerses = verses.map((verse, index) => {
-              return(verse[index+1]);
+              let tempVerse = index + 1;
+              let prettyVerse = tempVerse.toString();
+              const returnString = prettyVerse + ": " + verse[index + 1] + "";
+              return(
+                <div>
+                  {returnString}
+                  <br/>
+                </div>
+              );
             });
             this.setState({
-              passage: prettyVerses.join()
+              passage: prettyVerses
             });
 
             axios.get('http://localhost:4000/api/psalms/psalm/' + firstPsalm)

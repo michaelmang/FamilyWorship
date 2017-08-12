@@ -2,6 +2,7 @@ import React from 'react';
 import DashboardUI from '../presentationals/DashboardUI';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { getState } from 'redux';
+import {cyan500} from 'material-ui/styles/colors';
 import axios from 'axios';
 
 //Container React Component

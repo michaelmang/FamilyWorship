@@ -39,11 +39,12 @@ class SessionCard extends React.Component {
             <CardMedia
               overlay={<CardTitle title={title} subtitle={subtitle} />}
             >
-              <img src="https://images.pexels.com/photos/250609/pexels-photo-250609.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="" />
+              <img src="https://images.pexels.com/photos/267709/pexels-photo-267709.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="" />
             </CardMedia>
             <CardActions>
               <FlatButton
                 label="Start Session"
+                labelStyle={{color: "#F9A584"}}
                 onTouchTap={this.handleStartSession}
               />
             </CardActions>

@@ -9,6 +9,8 @@ import DatePicker from 'material-ui/DatePicker';
 import TimePicker from 'material-ui/TimePicker';
 import TextField from 'material-ui/TextField';
 import AutoComplete from 'material-ui/AutoComplete';
+import FontIcon from 'material-ui/FontIcon';
+import ActionCardGiftcard from 'material-ui/svg-icons/action/card-giftcard';
 import axios from 'axios';
 
 import SessionCard from './SessionCard';
@@ -268,11 +270,21 @@ class DashboardUI extends React.Component {
       <div className="dashboard" style={{background: "#F5F7FA"}}>
         <div className={css(styles.topBar)}>
           <h1 className={css(styles.title)}>Family Worship</h1>
-          <Avatar
-            src="https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"
-            size={50}
-            style={{ marginLeft: "auto" }}
-          />
+          <div className={css(styles.barRow)}>
+            <h3 className={css(styles.family)}>Welcome {this.props.name}s</h3>
+            <a target="_blank" href="https://www.paypal.me/mikemangialardi/25">
+              <FlatButton
+                icon={<ActionCardGiftcard color={"#FFFFFF"}/>}
+                label="Support This Project"
+                primary={true}
+                keyboardFocused={false}
+                backgroundColor={"#3ECF8E"}
+                hoverColor={"#3ECF8E"}
+                labelStyle={{color: "#FFFFFF"}}
+                style={{marginLeft: "15px"}}
+              />
+            </a>
+          </div>
         </div>
 
         <div className={css(styles.sessionsBody)}>
@@ -295,6 +307,9 @@ class DashboardUI extends React.Component {
             {this.state.openDialog ? (
                 <Dialog
                   title="Create New Session"
+                  titleStyle={{
+                    color: "#5F655F"
+                  }}
                   actions={actions}
                   modal={false}
                   autoScrollBodyContent={true}
@@ -316,11 +331,12 @@ class DashboardUI extends React.Component {
                   />
                   <h4 className={css(styles.label)}>Opening Prayer Notes:</h4>
                   <TextField
-                    hintText="Type as much as you want..."
+                    hintText="Type as many lines as you want..."
                     multiLine={true}
                     fullWidth={false}
                     value={this.state.openingNotes}
                     onChange={this.handleOpeningNotes}
+                    underlineFocusStyle={{borderColor: "#F89D79"}}
                   />
                   <h4 className={css(styles.label)}>First Psalm:</h4>
                   <AutoComplete
@@ -330,6 +346,7 @@ class DashboardUI extends React.Component {
                     maxSearchResults={3}
                     filter={AutoComplete.fuzzyFilter}
                     onUpdateInput={this.handleFirstPsalm}
+                    underlineFocusStyle={{borderColor: "#F89D79"}}
                   />
                   <h4 className={css(styles.label)}>Book:</h4>
                   <AutoComplete
@@ -339,6 +356,7 @@ class DashboardUI extends React.Component {
                     maxSearchResults={3}
                     filter={AutoComplete.fuzzyFilter}
                     onUpdateInput={this.handleBook}
+                    underlineFocusStyle={{borderColor: "#F89D79"}}
                   />
                   <h4 className={css(styles.label)}>Chapter:</h4>
                   <AutoComplete
@@ -348,14 +366,16 @@ class DashboardUI extends React.Component {
                     maxSearchResults={3}
                     filter={AutoComplete.fuzzyFilter}
                     onUpdateInput={this.handleChapter}
+                    underlineFocusStyle={{borderColor: "#F89D79"}}
                   />
                   <h4 className={css(styles.label)}>Message Notes:</h4>
                   <TextField
-                    hintText="Type as much as you want..."
+                    hintText="Type as many lines as you want..."
                     multiLine={true}
                     fullWidth={false}
                     value={this.state.messageNotes}
                     onChange={this.handleMessageNotes}
+                    underlineFocusStyle={{borderColor: "#F89D79"}}
                   />
                   <h4 className={css(styles.label)}>Second Psalm:</h4>
                   <AutoComplete
@@ -368,11 +388,12 @@ class DashboardUI extends React.Component {
                   />
                   <h4 className={css(styles.label)}>Closing Prayer Notes:</h4>
                   <TextField
-                    hintText="Type as much as you want..."
+                    hintText="Type as many lines as you want..."
                     multiLine={true}
                     fullWidth={false}
                     value={this.state.closingNotes}
                     onChange={this.handleClosingNotes}
+                    underlineFocusStyle={{borderColor: "#F89D79"}}
                   />
                 </Dialog>
               ) : (
@@ -410,6 +431,12 @@ const styles = StyleSheet.create({
     fontWeight: "300",
     marginTop: "-5px"
   },
+  family: {
+    color: "#828982",
+    fontFamily: 'Open Sans',
+    fontSize: "16px",
+    fontWeight: "400"
+  },
   sessionsBody: {
     position: "relative",
     width: "100vw",
@@ -429,6 +456,11 @@ const styles = StyleSheet.create({
     fontFamily: 'Open Sans',
     fontSize: "24px",
     fontWeight: "400"
+  },
+  barRow: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center"
   },
   sessionsRow: {
     display: "flex",

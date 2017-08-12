@@ -120,7 +120,11 @@ const styles = StyleSheet.create({
       color: "#DFCFAC",
       fontFamily: 'Gentium Book Basic',
       fontSize: "40px",
-      fontWeight: "300"
+      fontWeight: "300",
+      textAlign: "center",
+      '@media (max-width: 700px)': {
+        fontSize: "30px"
+      }
     },
     label: {
       color: "#828982",

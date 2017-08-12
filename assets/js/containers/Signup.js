@@ -156,7 +156,10 @@ const styles = StyleSheet.create({
       fontFamily: 'Gentium Book Basic',
       fontSize: "30px",
       textAlign: "center",
-      fontWeight: "300"
+      fontWeight: "300",
+      '@media (max-width: 700px)': {
+        display: "none"
+      }
     },
     paragraph: {
       color: "#FFFFFF",
@@ -166,7 +169,10 @@ const styles = StyleSheet.create({
       paddingLeft: "20px",
       paddingRight: "20px",
       marginTop: "20px",
-      fontWeight: "300"
+      fontWeight: "300",
+      '@media (max-width: 700px)': {
+        display: "none"
+      }
     }
 });
 

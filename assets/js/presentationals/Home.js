@@ -7,14 +7,14 @@ class Home extends React.Component {
   render() {
     return (
       <header className={css(styles.hero)}>
-        <h1 className={css(styles.title)}>Family Worship</h1>
-        <h2 className={css(styles.subtitle)}>The easiest way to manage family worship sessions amidst the busyness of life.</h2>
+        <h1 className={css(styles.title, styles.mobileTitle)}>Family Worship</h1>
+        <h2 className={css(styles.subtitle, styles.mobileSubtitle)}>The easiest way to manage family worship sessions amidst the busyness of life.</h2>
         <div className={css(styles.buttonsRow)}>
           <Link to="signup" className={css(styles.link)}>
-            <div className={css(styles.button)}>Create a Free Account</div>
+            <div className={css(styles.button, styles.lessRadius)}>Create a Free Account</div>
           </Link>
           <Link to="login" className={css(styles.link)}>
-            <div className={css(styles.button2)}>Login to Your Account</div>
+            <div className={css(styles.button2, styles.removeTop, styles.lessRadius)}>Login to Your Account</div>
           </Link>
         </div>
       </header>
@@ -37,24 +37,33 @@ const styles = StyleSheet.create({
           ), url('https://images.pexels.com/photos/250609/pexels-photo-250609.jpeg?w=940&h=650&auto=compress&cs=tinysrgb')
           no-repeat center center
         `,
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        '@media (max-width: 600px)': {
+          paddingLeft: "5%",
+          paddingRight: "5%"
+        }
     },
     title: {
       color: "#DFCFAC",
       fontFamily: 'Gentium Book Basic',
       fontSize: "100px",
+      textAlign: "center",
       fontWeight: "300"
     },
     subtitle: {
-      color: "#828982",
+      color: "#FFFFFF",
+      opacity: "0.5",
+      letterSpacing: "2px",
       fontFamily: 'Open Sans',
       fontSize: "20px",
+      textAlign: "center",
       marginTop: "10px",
       fontWeight: "300"
     },
     buttonsRow: {
       display: "flex",
       flexDirection: "row",
+      flexWrap: "wrap",
       alignItems: "center",
       justifyContent: "center"
     },
@@ -82,7 +91,31 @@ const styles = StyleSheet.create({
     },
     link: {
       textDecoration: "none",
-      marginRight: "30px"
+      marginRight: "30px",
+      '@media (max-width: 600px)': {
+        marginRight: "0px"
+      }
+    },
+    lessRadius: {
+      '@media (max-width: 600px)': {
+        borderRadius: "20px"
+      }
+    },
+    mobileTitle: {
+      '@media (max-width: 600px)': {
+        fontSize: "50px"
+      }
+    },
+    mobileSubtitle: {
+      '@media (max-width: 600px)': {
+        fontSize: "12px",
+        maxWidth: "100%"
+      }
+    },
+    removeTop: {
+      '@media (max-width: 600px)': {
+        marginTop: "15px"
+      }
     }
 });
 

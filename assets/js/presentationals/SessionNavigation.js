@@ -57,6 +57,10 @@ class SessionNavigation extends React.Component {
                 backgroundColor: "#1A374F",
                 borderColor: "#FFFFFF"
               }}
+              style={{
+                fontSize: "12px",
+                fontFamily: "Open Sans"
+              }}
             >
               <div
                 style={{
@@ -76,6 +80,10 @@ class SessionNavigation extends React.Component {
               buttonStyle={{
                 backgroundColor: "#1A374F",
                 borderColor: "#FFFFFF"
+              }}
+              style={{
+                fontSize: "12px",
+                fontFamily: "Open Sans"
               }}
             >
               <div
@@ -104,6 +112,10 @@ class SessionNavigation extends React.Component {
                 backgroundColor: "#1A374F",
                 borderColor: "#FFFFFF"
               }}
+              style={{
+                fontSize: "12px",
+                fontFamily: "Open Sans"
+              }}
             >
               <div
                 style={{
@@ -124,6 +136,10 @@ class SessionNavigation extends React.Component {
                 backgroundColor: "#1A374F",
                 borderColor: "#FFFFFF"
               }}
+              style={{
+                fontSize: "12px",
+                fontFamily: "Open Sans"
+              }}
             >
               <div
                 style={{
@@ -143,6 +159,10 @@ class SessionNavigation extends React.Component {
               buttonStyle={{
                 backgroundColor: "#1A374F",
                 borderColor: "#FFFFFF"
+              }}
+              style={{
+                fontSize: "12px",
+                fontFamily: "Open Sans"
               }}
             >
               <div
@@ -171,6 +191,10 @@ class SessionNavigation extends React.Component {
                 backgroundColor: "#1A374F",
                 borderColor: "#FFFFFF"
               }}
+              style={{
+                fontSize: "12px",
+                fontFamily: "Open Sans",
+              }}
             >
               <div
                 style={{
@@ -191,6 +215,10 @@ class SessionNavigation extends React.Component {
               buttonStyle={{
                 backgroundColor: "#F89D79",
                 borderColor: "#FFFFFF"
+              }}
+              style={{
+                fontSize: "12px",
+                fontFamily: "Open Sans"
               }}
             >
               <div>
@@ -223,12 +251,15 @@ const styles = StyleSheet.create({
     fontWeight: "400"
   },
   paragraph: {
-    color: "#828982",
+    color: "#5F655F",
     fontFamily: 'Open Sans',
     textAlign: "left",
     fontSize: "16px",
-    lineHeight: "24px",
-    fontWeight: "300"
+    lineHeight: "30px",
+    fontWeight: "400",
+    letterSpacing: "1.2px",
+    marginBottom: "15px",
+    textAlign: "left"
   }
 });
 
