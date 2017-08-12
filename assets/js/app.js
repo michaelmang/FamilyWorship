@@ -38,7 +38,7 @@ class App extends React.Component {
 //intialize store
 let store = createStore(
   FamilyWorshipApp,
-  applyMiddleware( thunk, logger )
+  applyMiddleware( logger )
 );
 
 ReactDOM.render(
