@@ -31,7 +31,7 @@ class Session extends React.Component {
   }
 
   getSessionInfo() {
-    axios.get('http://localhost:4000/api/worship_sessions/' + this.stateProps.sessionID)
+    axios.get('https://sheltered-mesa-51446.herokuapp.com/api/worship_sessions/' + this.stateProps.sessionID)
       .then((response) => {
         const firstPsalm = response.data.data.firstPsalm;
         const secondPsalm = response.data.data.secondPsalm;
@@ -69,7 +69,7 @@ class Session extends React.Component {
               passage: prettyVerses
             });
 
-            axios.get('http://localhost:4000/api/psalms/psalm/' + firstPsalm)
+            axios.get('https://sheltered-mesa-51446.herokuapp.com/api/psalms/psalm/' + firstPsalm)
               .then((response) => {
                 this.setState({
                   firstPsalmRef: response.data.data.psalm_ref,
@@ -77,7 +77,7 @@ class Session extends React.Component {
                   firstPsalmNotes: response.data.data.notes
                 });
 
-                axios.get('http://localhost:4000/api/psalms/psalm/' + secondPsalm)
+                axios.get('https://sheltered-mesa-51446.herokuapp.com/api/psalms/psalm/' + secondPsalm)
                   .then((response) => {
                     this.setState({
                       secondPsalmRef: response.data.data.psalm_ref,
