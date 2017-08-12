@@ -49,6 +49,7 @@ class Signup extends React.Component {
       }
     })
     .then((response) => {
+      console.log(response);
       if(response.data.meta.token !== "") {
         this.props.store.dispatch(StoreId(response.data.data.id));
         this.props.store.dispatch(AuthenticateUser());
