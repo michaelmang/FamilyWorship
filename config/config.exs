@@ -11,7 +11,7 @@ config :family_worship,
 
 # Configures the endpoint
 config :family_worship, FamilyWorshipWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "family-worship.herokuapp.com"],
   secret_key_base: "eDxiRsym52HFEJijR4NT8r1PAGhZp+lFAkViiP5sSLRXWAz/KeHADGNjJcJPOkYA",
   render_errors: [view: FamilyWorshipWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: FamilyWorship.PubSub,
@@ -22,6 +22,13 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+# Configures Guardian
+  config :guardian, Guardian,
+    issuer: "FamilyWorship",
+    ttl: {30, :days},
+    verify_issuer: true,
+    serializer: FamilyWorship.GuardianSerializer,
+    secret_key: "ht9l4jHJtpn420vjNGu2TNJxctxQMu+yEeP/ZxrF70IC1MOfqpt7F36wrrL7qNkX"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

@@ -6,7 +6,7 @@ import axios from 'axios';
 
 import StoreFamilyId from '../actions/StoreFamilyId';
 
-//Container React Component
+//Container Component
 class FamilySignup extends React.Component {
   constructor(props) {
     super(props);
@@ -25,12 +25,6 @@ class FamilySignup extends React.Component {
     });
   }
 
-  // handleProfilePic (event) {
-  //   this.setState({
-  //     profilePic: event.target.value
-  //   });
-  // }
-
   handleSubmit (event) {
     event.preventDefault();
     axios({
@@ -38,7 +32,7 @@ class FamilySignup extends React.Component {
       headers: {
         "Content-Type": "application/json",
       },
-      url: 'http://localhost:4000/api/families',
+      url: 'https://family-worship.herokuapp.com/api/families',
       data: {
         family: {
           name: this.state.name,

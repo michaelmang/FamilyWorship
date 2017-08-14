@@ -40,7 +40,7 @@ class Signup extends React.Component {
     axios({
       method: 'post',
       headers: {"Content-Type": "application/json"},
-      url: 'http://localhost:4000/api/users',
+      url: 'https://family-worship.herokuapp.com/api/users',
       data: {
         user: {
           email: this.state.email,
