@@ -167,8 +167,9 @@ class DashboardUI extends React.Component {
   }
 
   handleBook(searchText) {
+    const text = searchText.replace(/\s+/g, '');
     this.setState({
-      book: searchText
+      book: text
     }, () => {
       const bookURL = "https://raw.githubusercontent.com/aruljohn/Bible-kjv/master/" + this.state.book + ".json";
       axios.get(bookURL)
